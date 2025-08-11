@@ -33,6 +33,14 @@ export class UpdateUserService {
             return null
         }
 
+        if(updateData.email) {
+            const userWithSameEmail = await this.usersRepository.findByEmail(updateData.email);
+
+            if(userWithSameEmail && userWithSameEmail.id !== userId) {
+                throw new Error("Email already in use");
+            }
+        }
+
         if(updateData.senha) {
             updateData.senha = await hash(updateData.senha, 8);
         }
