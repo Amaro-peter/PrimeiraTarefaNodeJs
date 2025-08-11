@@ -1,8 +1,8 @@
 import { Prisma, User } from "@/generatedORMFiles/prisma";
 import { prisma } from "@/ORMLib/prisma";
-import { UsersRepository } from "../interfaceRepository/userInterfaceRepository";
+import { UsersInterfaceRepository } from "../interfaceRepository/userInterfaceRepository";
 
-export class PrismaUsersRepository implements UsersRepository {
+export class PrismaUsersRepository implements UsersInterfaceRepository {
     async findByEmail(email: string){
         const user = await prisma.user.findUnique({
             where: {
@@ -14,11 +14,15 @@ export class PrismaUsersRepository implements UsersRepository {
     }
 
     async create(data: Prisma.UserCreateInput) {
-        const user = await prisma.user.create({
-            data
-        });
+        try {
+            const user = await prisma.user.create({
+                data
+            });
 
-        return user;
+            return user;
+        } catch (error) {
+            return null;
+        }
     }
 
     async findMany() {

@@ -1,7 +1,7 @@
 import { Prisma, User } from "@/generatedORMFiles/prisma";
 
 export interface UsersInterfaceRepository {
-    create(data: Prisma.UserCreateInput): Promise<User>
+    create(data: Prisma.UserCreateInput): Promise<User | null>;
 
     findByEmail(email: string): Promise<User | null> 
 
@@ -12,5 +12,4 @@ export interface UsersInterfaceRepository {
     deleteUser(userId: string): Promise<void>
 
     updateUser(userId: string, data: Prisma.UserUpdateInput): Promise<User>
-    
 }

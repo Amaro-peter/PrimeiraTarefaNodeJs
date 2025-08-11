@@ -29,15 +29,21 @@ export async function updateUser(request: FastifyRequest<{ Params: GetUserParams
 
         const userId = request.params.id as string;
 
-        const user = await updateUserService.execute(userId, filteredData);
+        const result = await updateUserService.execute(userId, filteredData);
 
-        if (!user) {
+        if(typeof result === 'string') {
+            return reply.status(400).send({
+                message: result
+            });
+        }
+
+        if (!result) {
             return reply.status(404).send({
                 message: "Usuário não encontrado ou nenhum dado para atualizar"
             });
         }
 
-        return reply.status(200).send(user);
+        return reply.status(200).send(result);
         
 
     } catch (error) {

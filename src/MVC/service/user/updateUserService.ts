@@ -14,7 +14,7 @@ export class UpdateUserService {
 
     }
 
-    async execute(userId: string, data: UpdateUserData): Promise<User | null> {
+    async execute(userId: string, data: UpdateUserData): Promise<User | string | null> {
         const existingUser = await this.usersRepository.findById(userId);
 
         if(!existingUser) {
@@ -37,7 +37,7 @@ export class UpdateUserService {
             const userWithSameEmail = await this.usersRepository.findByEmail(updateData.email);
 
             if(userWithSameEmail && userWithSameEmail.id !== userId) {
-                throw new Error("Email already in use");
+                return 'Email já cadastrado';
             }
         }
 
