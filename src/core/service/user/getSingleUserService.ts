@@ -1,5 +1,5 @@
 import { User } from "@/generatedORMFiles/prisma";
-import { UsersInterfaceRepository } from "@/MVC/repositories/interfaceRepository/userInterfaceRepository";
+import { UsersInterfaceRepository } from "@/core/repositories/interfaceRepository/userInterfaceRepository";
 
 export class GetSingleUserService {
     constructor(private usersRepository: UsersInterfaceRepository) {

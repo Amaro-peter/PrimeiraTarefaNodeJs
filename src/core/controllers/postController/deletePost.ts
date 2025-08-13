@@ -1,5 +1,5 @@
-import { PrismaPostRepository } from "@/MVC/repositories/prismaRepository/postPrismaRepository";
-import { DeletePostService } from "@/MVC/service/posts/deletePostService";
+import { PrismaPostRepository } from "@/core/repositories/prismaRepository/postPrismaRepository";
+import { DeletePostService } from "@/core/service/posts/deletePostService";
 import { FastifyReply, FastifyRequest } from "fastify";
 import z from "zod";
 

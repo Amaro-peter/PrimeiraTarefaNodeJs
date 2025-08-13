@@ -1,4 +1,4 @@
-import { UsersInterfaceRepository } from "@/MVC/repositories/interfaceRepository/userInterfaceRepository";
+import { UsersInterfaceRepository } from "@/core/repositories/interfaceRepository/userInterfaceRepository";
 
 export class DeleteUserService {
     constructor(private usersRepository: UsersInterfaceRepository) {

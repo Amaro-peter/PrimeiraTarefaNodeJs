@@ -1,6 +1,6 @@
 import { Post } from "@/generatedORMFiles/prisma";
-import { PostsInterfaceRepository } from "@/MVC/repositories/interfaceRepository/postsInterfaceRepository";
-import { UsersInterfaceRepository } from "@/MVC/repositories/interfaceRepository/userInterfaceRepository";
+import { PostsInterfaceRepository } from "@/core/repositories/interfaceRepository/postsInterfaceRepository";
+import { UsersInterfaceRepository } from "@/core/repositories/interfaceRepository/userInterfaceRepository";
 
 
 interface CreatePostServiceRequest {

@@ -1,5 +1,5 @@
-import { PrismaUsersRepository } from "@/MVC/repositories/prismaRepository/userPrismaRepository";
-import { RegisterUseCase } from "@/MVC/service/user/registerUserService";
+import { PrismaUsersRepository } from "@/core/repositories/prismaRepository/userPrismaRepository";
+import { RegisterUseCase } from "@/core/service/user/registerUserService";
 import { FastifyReply, FastifyRequest } from "fastify";
 import z from "zod";
 

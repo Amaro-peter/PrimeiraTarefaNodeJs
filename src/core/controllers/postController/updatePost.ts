@@ -1,6 +1,6 @@
 import { Prisma } from "@/generatedORMFiles/prisma";
-import { PrismaPostRepository } from "@/MVC/repositories/prismaRepository/postPrismaRepository";
-import { UpdatePostService } from "@/MVC/service/posts/updatePostService";
+import { PrismaPostRepository } from "@/core/repositories/prismaRepository/postPrismaRepository";
+import { UpdatePostService } from "@/core/service/posts/updatePostService";
 import { FastifyReply, FastifyRequest } from "fastify";
 import z from "zod";
 

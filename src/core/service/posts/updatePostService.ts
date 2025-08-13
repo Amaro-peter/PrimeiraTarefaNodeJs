@@ -1,5 +1,5 @@
 import { Post } from "@/generatedORMFiles/prisma";
-import { PostsInterfaceRepository } from "@/MVC/repositories/interfaceRepository/postsInterfaceRepository";
+import { PostsInterfaceRepository } from "@/core/repositories/interfaceRepository/postsInterfaceRepository";
 
 interface UpdatePostServiceRequest {
     id: string;

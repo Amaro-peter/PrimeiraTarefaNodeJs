@@ -1,6 +1,6 @@
-import { PrismaPostRepository } from "@/MVC/repositories/prismaRepository/postPrismaRepository";
-import { PrismaUsersRepository } from "@/MVC/repositories/prismaRepository/userPrismaRepository";
-import { CreatePostService } from "@/MVC/service/posts/createPostService";
+import { PrismaPostRepository } from "@/core/repositories/prismaRepository/postPrismaRepository";
+import { PrismaUsersRepository } from "@/core/repositories/prismaRepository/userPrismaRepository";
+import { CreatePostService } from "@/core/service/posts/createPostService";
 import { FastifyReply, FastifyRequest } from "fastify";
 import z from "zod";
 

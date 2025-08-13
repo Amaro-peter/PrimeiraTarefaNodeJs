@@ -1,5 +1,5 @@
-import { PrismaPostRepository } from "@/MVC/repositories/prismaRepository/postPrismaRepository";
-import { GetAllPostsService } from "@/MVC/service/posts/getAllPostsService";
+import { PrismaPostRepository } from "@/core/repositories/prismaRepository/postPrismaRepository";
+import { GetAllPostsService } from "@/core/service/posts/getAllPostsService";
 import { FastifyReply, FastifyRequest } from "fastify";
 
 export async function getAllPosts(request: FastifyRequest, reply: FastifyReply) {

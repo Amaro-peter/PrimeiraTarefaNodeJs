@@ -1,5 +1,5 @@
-import { PrismaPostRepository } from "@/MVC/repositories/prismaRepository/postPrismaRepository";
-import { GetPostsByUserService } from "@/MVC/service/posts/getPostsByUserService";
+import { PrismaPostRepository } from "@/core/repositories/prismaRepository/postPrismaRepository";
+import { GetPostsByUserService } from "@/core/service/posts/getPostsByUserService";
 import { FastifyReply, FastifyRequest } from "fastify";
 import z from "zod";
 

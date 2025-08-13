@@ -1,7 +1,7 @@
 
 import fastify from 'fastify';
-import { appUserRoutes } from './routes/userRoutes/routes';
-import { appPostRoutes } from './routes/postRoutes/postRoutes';
+import { appUserRoutes } from './core/routes/userRoutes/routes';
+import { appPostRoutes } from './core/routes/postRoutes/postRoutes';
 
 export const app = fastify();
 
